@@ -1,4 +1,4 @@
-import { SEARCH_MOVIE, FETCH_MOVIES, FETCH_MOVIE, LOADING,IS_VISIBLE,NOT_VISIBLE } from './types'
+import { SEARCH_MOVIE, FETCH_MOVIES, FETCH_MOVIE, LOADING,IS_VISIBLE,NOT_VISIBLE, MOVIE_DATA } from './types'
 import axios from 'axios';
 import { APIKey } from '../../APIKey'
 export const searchMovie = text => dispatch => {
@@ -43,3 +43,9 @@ export const setLoading = () => (
             {
                 type: NOT_VISIBLE
             })
+            export const setMovieData = (movieData) => (
+                {
+                    type: MOVIE_DATA,
+                    payload: movieData
+
+                })

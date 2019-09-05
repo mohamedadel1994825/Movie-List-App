@@ -1,10 +1,13 @@
+import { MOVIE_DATA } from './../actions/types';
 import {SEARCH_MOVIE, FETCH_MOVIES,FETCH_MOVIE, LOADING,IS_VISIBLE,NOT_VISIBLE} from '../actions/types'
+import { setMovieData } from '../actions/searchActions';
 const initialState = {
     text: '',
     movies: [],
     movie: [],
     loading: false,
-    visible:false
+    visible:false,
+    movieData:[]
 }
 export default function (state = initialState, action) {
     switch (action.type) {
@@ -27,6 +30,11 @@ export default function (state = initialState, action) {
                 movie: action.payload,
                 loading: false
             }
+            case MOVIE_DATA:
+                return {
+                    ...state,
+                    movieData: action.payload,
+                }
             case LOADING:
             return {
                 ...state,

@@ -1,10 +1,12 @@
+import { setMovieData } from './../actions/searchActions';
+import { movieData } from './../actions/types';
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom'
 import { connect } from 'react-redux';
 import { Moviecard } from '../styledcompnents/styledComponent'
 import { Width, Height, Colors } from '../../index'
 import { Modal, Button } from 'antd';
-import {setVisibleTrue} from '../actions/searchActions'
+import {setVisibleTrue,fetchMovies} from '../actions/searchActions'
 class MovieCard extends Component {
   // state = { visible: false };
 
@@ -65,7 +67,10 @@ class MovieCard extends Component {
             , backgroundColor: Colors.blueColor, cursor: 'pointer',
             borderColor: 'transparent', color: Colors.whiteColor
           }}
-          onClick={()=>this.props.setVisibleTrue()}
+          onClick={()=>{
+            this.props.setVisibleTrue() 
+            this.props.setMovieData(movie);
+          }}
           >
            Load More
           </button>
@@ -92,5 +97,6 @@ const mapStateToProps = state => ({
 
 export default connect(
   mapStateToProps,
-  { setVisibleTrue }
+  { setVisibleTrue,fetchMovies,setMovieData }
 )(MovieCard);
+
