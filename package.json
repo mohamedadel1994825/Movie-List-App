@@ -2,7 +2,7 @@
   "name": "movielist",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://mohamedadel1994825.github.io/myreact-js-first-app",
+  "homepage": "https://mohamedadel1994825.github.io/react-js-first-app",
   "dependencies": {
     "antd": "^3.22.0",
     "axios": "^0.19.0",
