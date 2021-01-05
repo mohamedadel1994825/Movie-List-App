@@ -5,7 +5,7 @@
   "homepage": "https://mohamedadel1994825.github.io/react-js-first-app",
   "dependencies": {
     "antd": "^3.22.0",
-    "axios": "^0.19.0",
+    "axios": "^0.21.1",
     "bootstrap": "^4.3.1",
     "react": "^16.9.0",
     "react-bootstrap": "^1.0.0-beta.10",
